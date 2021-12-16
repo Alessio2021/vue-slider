@@ -27,15 +27,15 @@ var app = new Vue({
                 this.counter = this.images.length - 1;
             }
         }, 
-        timer: function () {
-            setInterval(this.next, 3000);
+        play: function () {
+            this.timer = setInterval(this.next, 3000);
         },
         stopped: function () {
             clearInterval(this.timer);
         }
     },
     created() {
-        this.timer()
+        this.play()
     }
 });
 
